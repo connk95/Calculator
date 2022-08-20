@@ -20,6 +20,7 @@ function divide(a, b) {
     result = a / b;
 };
 
+//buttons for operations
 const addition = document.getElementById('plus').addEventListener('click', () => {
     operation = 1;
 });
@@ -68,13 +69,13 @@ if (operation === 0) {
     };
 };
 
-//separate buttons for operations from number buttons
-
 const clear = document.getElementById('clear').addEventListener('click', () => {
     document.getElementById('result').innerHTML = "";
-    result = [];
-    primary = []; 
+    result = null;
+    primary = [];
+    num1 = null; 
     secondary = [];
-    operation = null;
+    num2 = null;
+    operation = 0;
 });
 
