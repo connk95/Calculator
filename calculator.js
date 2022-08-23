@@ -23,15 +23,19 @@ function divide(a, b) {
 //buttons for operations
 const addition = document.getElementById('plus').addEventListener('click', () => {
     operation = 1;
+    document.getElementById('result').innerHTML = "";
 });
 const subtraction = document.getElementById('minus').addEventListener('click', () => {
     operation = 2;
+    document.getElementById('result').innerHTML = "";
 });
 const multiplication = document.getElementById('multiply').addEventListener('click', () => {
     operation = 3;
+    document.getElementById('result').innerHTML = "";
 });
 const division = document.getElementById('divide').addEventListener('click', () => {
     operation = 4;
+    document.getElementById('result').innerHTML = "";
 });
 const operate = document.getElementById('equals').addEventListener('click', () => {
     if (operation === 1) {
@@ -51,21 +55,23 @@ const operate = document.getElementById('equals').addEventListener('click', () =
 
 //store the first and second integers using the selected numbers
 //switch from variable num1 to num2 when an operation has been selected
-if (operation === 0) {
-    for (let i = 0; i < 10; i++) {
-        document.getElementById(`button${i}`).addEventListener('click', () => {
-            primary.push(i)
-            num1 = +primary.join("");
-            document.getElementById('result').innerHTML = num1;
-        })
-    };
-} else if (operation !== 0) {
-    for (let i = 0; i < 10; i++) {
-        document.getElementById(`button${i}`).addEventListener('click', () => {
-            secondary.push(i)
-            num2 = +secondary.join("");
-            document.getElementById('result').innerHTML = num2;
-        })
+function input(o) {
+    if (o === 0) {
+        for (let i = 0; i < 10; i++) {
+            document.getElementById(`button${i}`).addEventListener('click', () => {
+                primary.push(i)
+                num1 = +primary.join("");
+                document.getElementById('result').innerHTML = num1;
+            })
+        };
+    } else if (o !== 0) {
+        for (let i = 0; i < 10; i++) {
+            document.getElementById(`button${i}`).addEventListener('click', () => {
+                secondary.push(i)
+                num2 = +secondary.join("");
+                document.getElementById('result').innerHTML = num2;
+            })
+        };
     };
 };
 
@@ -78,4 +84,6 @@ const clear = document.getElementById('clear').addEventListener('click', () => {
     num2 = null;
     operation = 0;
 });
+
+input (operation);
 
