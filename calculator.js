@@ -50,11 +50,17 @@ const division = document.getElementById('divide').addEventListener('click', () 
 });
 const operate = document.getElementById('equals').addEventListener('click', () => {
     num2 = +memory.join("");
-    result = calculate(num1, num2);
-    console.log(calculate(num1, num2));
-    document.getElementById('result').innerHTML = result;
-    operation = 0;
-    num1 = result
+    if (operation === 4 && num2 === 0) {
+        document.getElementById('result').innerHTML = "Huh?"
+    } else if (num1 === null || num2 === null || memory === [] || operation === 0) {
+        document.getElementById('result').innerHTML = "Error"
+    } else {
+        result = Math.round(calculate(num1, num2) * 100) / 100
+        document.getElementById('result').innerHTML = result
+        operation = 0;
+        num1 = result;
+        num2 = null;
+    };
 });
 
 for (let i = 0; i < 10; i++) {
