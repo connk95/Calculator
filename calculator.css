@@ -8,7 +8,7 @@
     border: black 2px solid;
     border-radius: 20px;
     width: 400px;
-    height: 500px;
+    height: 600px;
 }
 
 .row1 {
@@ -39,6 +39,13 @@
     justify-content: space-evenly;
 }
 
+.row5 {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 button {
     display: flex;
     width: 80px;
@@ -46,6 +53,26 @@ button {
     font-size: large;
     justify-content: center;
     align-items: center;
+}
+
+#clear {
+    display: flex;
+    width: 170px;
+    height: 80px;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+}
+
+#equals {
+    display: flex;
+    width: 170px;
+    height: 80px;
+    font-size: large;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
 }
 
 .buttons {
