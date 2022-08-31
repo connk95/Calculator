@@ -53,6 +53,7 @@ button {
     font-size: large;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 
 #clear {
