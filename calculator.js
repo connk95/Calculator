@@ -3,7 +3,6 @@ let num1 = null;
 let num2 = null;
 let operation = 0;
 let result = null;
-let num3 = null;
 
 function calculate(a, b) {
     if (operation === 1) {
@@ -76,20 +75,13 @@ const operate = document.getElementById('equals').addEventListener('click', () =
         document.getElementById('result').innerHTML = "Huh?"
     } else if (num1 === null || num2 === null || memory === [] || operation === 0) {
         document.getElementById('result').innerHTML = "Error"
-    } else {
-        if (num3 !== null) {
-            result = Math.round(calculate(num1, num2) * 100) / 100
-            document.getElementById('result').innerHTML = result
-            operation = 0;
-            num1 = result;
-            num2 = null;
-        } else {
-            result = Math.round(calculate(num1, num2) * 100) / 100
-            document.getElementById('result').innerHTML = result
-            operation = 0;
-            num1 = result;
-            num2 = null;
-        }
+    } else {        
+        result = Math.round(calculate(num1, num2) * 100) / 100
+        document.getElementById('result').innerHTML = result
+        operation = 0;
+        num1 = result;
+        num2 = null;
+        memory = [];
     };
 });
 
