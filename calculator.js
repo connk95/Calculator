@@ -60,7 +60,14 @@ const decimal = document.getElementById('decimal').addEventListener('click', () 
 
 const del = document.getElementById('delete').addEventListener('click', () => {
     memory.pop();
-    document.getElementById('result').innerHTML = +memory.join("")
+    document.getElementById('result').innerHTML = +memory.join("");
+});
+
+const negate = document.getElementById('negate').addEventListener('click', () => {
+    document.getElementById('result').innerHTML = (+memory.join("")) * -1;
+    let num3 = ((+memory.join("")) * -1);
+    memory = [];
+    memory.push(num3);
 });
 
 const operate = document.getElementById('equals').addEventListener('click', () => {

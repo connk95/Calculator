@@ -56,15 +56,6 @@ button {
     border-radius: 20px;
 }
 
-#clear {
-    display: flex;
-    width: 170px;
-    height: 80px;
-    font-size: large;
-    justify-content: center;
-    align-items: center;
-}
-
 #equals {
     display: flex;
     width: 170px;
